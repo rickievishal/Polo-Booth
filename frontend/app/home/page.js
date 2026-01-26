@@ -15,9 +15,13 @@ const page = () => {
     const data = useAuth()
     console.log(data)
     const fetchPost = async() => {
-        const res = await api.get("/api/get-posts");
-        console.log(res.data);
-        setPosts(res.data);
+        try{
+            const res = await api.get("/api/get-posts");
+            console.log(res.data);
+            setPosts(res.data);
+        }catch(e){
+            console.log(e)
+        }
     }
     useEffect(() => {
       fetchPost();

@@ -15,7 +15,10 @@ const { logout } = require("./controllers/logoutUser");
 const app = express();
 const ORIGIN = process.env.ORIGIN;
 app.use(cors({
-    origin:ORIGIN,
+    origin:[
+      "http://localhost:3000",
+      "https://polo-booth.vercel.app",
+    ],
     credentials :true
 }))
 
