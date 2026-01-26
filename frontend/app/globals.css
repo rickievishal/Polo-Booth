@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary : #FF84DF;
+  --secondary : #FCC52E;
+  --primarybg : #FCE4EC;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+.comic {
+  font-family: "Playpen Sans"
+}
+body {
+  box-sizing: border-box;
+  width: 100vw;
+
+  background: var(--primarybg);
+  color: black;
+  /* font-family: Arial, Helvetica, sans-serif; */
+}

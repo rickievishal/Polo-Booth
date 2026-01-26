@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/vishalthangamaiappan/blog-site-learn/frontend/app/page.js"],"sourcesContent":["\"use client\"\nimport { useAuth } from \"@/context/AuthContext\";\nimport Image from \"next/image\";\n\nexport default function Home() {\n  const {user,isLoading} = useAuth();\n  console.log(user,isLoading)\n  return (\n    <div className=\"flex min-h-screen items-center justify-center bg-zinc-50 font-sans \">\n          \n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AACA;AACA;AAFA;;;;AAIe,SAAS;IACtB,MAAM,EAAC,IAAI,EAAC,SAAS,EAAC,GAAG,IAAA,sKAAO;IAChC,QAAQ,GAAG,CAAC,MAAK;IACjB,qBACE,mRAAC;QAAI,WAAU;;;;;;AAInB"}}]
+}
