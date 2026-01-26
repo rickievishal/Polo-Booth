@@ -29,23 +29,23 @@ const Navbar = () => {
           bg-[var(--primary)]
           px-6 py-3
           shadow-[6px_6px_0px_0px_black]'>
-            <span className='font-bold'>
+            <span className='font-bold text-sm'>
                 Poloroid
             </span>
             <ul className='flex items-center gap-x-4'>
                 <li className='font-bold'>
-                    <Link className='font-bold hover:cursor-pointer' href='/home'>
+                    <Link className='font-bold hover:cursor-pointer text-sm' href='/home'>
                         feed
                     </Link>
                 </li>
                 <li className='font-bold'>
-                    <Link className='font-bold hover:cursor-pointer' href='/post'>
+                    <Link className='font-bold hover:cursor-pointer text-sm' href='/post'>
                         upload
                     </Link>
                 </li>
                 <li > {
                     !user ?
-                    (<Link className='font-bold hover:cursor-pointer' href='/login'>
+                    (<Link className='font-bold hover:cursor-pointer text-sm' href='/login'>
                         <Button>
                             Login
                         </Button>
