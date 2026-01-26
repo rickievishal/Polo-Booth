@@ -31,7 +31,7 @@ const LoginForm = () =>{
         }
     }
     return (
-        <PopupForm title='Login to your account' className='flex flex-col gap-y-4 pb-8 px-4' onSubmit={handleLogin}>
+        <PopupForm title='Login' className='flex flex-col gap-y-4 pb-8 px-4' onSubmit={handleLogin}>
             <div className='max-w-sm'>
             
             <Input
@@ -80,7 +80,7 @@ const SignUpForm = () => {
         }
     }
     return (
-        <PopupForm title='Create your account' className='flex flex-col gap-y-4 pb-8 px-4' onSubmit={handleSignUp}>
+        <PopupForm title='Create account' className='flex flex-col gap-y-4 pb-8 px-4' onSubmit={handleSignUp}>
             <div className='max-w-xs'>
                 <Input
                 label={"Username"}
