@@ -8,7 +8,7 @@ const FileUpload = ({onChange,fileName}) => {
     }
   return (
     <div className='inline-flex items-center space-x-4'>
-        <p>{fileName}</p>
+        <p>{fileName.slice(0,15)}</p>
         <Button onClick={handleClick}>
             Chose
         </Button>

@@ -6,6 +6,7 @@ import Input from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
 import PopupForm from '@/components/ui/PopupForm'
 import { useRouter } from 'next/navigation'
+import HideLogin from '@/components/auth/HideLogin'
 
 
 const LoginForm = () =>{
@@ -119,23 +120,25 @@ const page = () => {
         setForm("login");
     }
   return (
-    <div className='w-full h-full flex flex-col items-center py-32 bg-pink-50'>
-        <section className='mx-auto max-w-5xl flex flex-col items-center gap-y-4 px-4'>
-            <div className='w-50 h-10 border rounded-r-full rounded-l-full px-1 py-1 gap-x-1 flex items-center justify-center bg-pink-100 shadow-[3px_3px_0px_0px_black]'>
-                <div className={`w-1/2 h-full flex items-center justify-center border rounded-r-full rounded-l-full hover:cursor-pointer bg-pink-50 ${form === "login" &&  "bg-pink-400"}`} onClick={()=>toggleSignUp()}>
-                        Login
+    <HideLogin>
+        <div className='w-full h-full flex flex-col items-center py-32 bg-pink-50'>
+            <section className='mx-auto max-w-5xl flex flex-col items-center gap-y-4 px-4'>
+                <div className='w-50 h-10 border rounded-r-full rounded-l-full px-1 py-1 gap-x-1 flex items-center justify-center bg-pink-100 shadow-[3px_3px_0px_0px_black]'>
+                    <div className={`w-1/2 h-full flex items-center justify-center border rounded-r-full rounded-l-full hover:cursor-pointer bg-pink-50 ${form === "login" &&  "bg-pink-400"}`} onClick={()=>toggleSignUp()}>
+                            Login
+                    </div>
+                    <div className={`w-1/2 h-full flex items-center justify-center border rounded-r-full rounded-l-full hover:cursor-pointer bg-pink-50 ${form === "sign-up" && "bg-pink-400"}`} onClick={()=>toggleLogin()}>
+                            SignUp
+                    </div>
                 </div>
-                <div className={`w-1/2 h-full flex items-center justify-center border rounded-r-full rounded-l-full hover:cursor-pointer bg-pink-50 ${form === "sign-up" && "bg-pink-400"}`} onClick={()=>toggleLogin()}>
-                        SignUp
+                <div className='w-full'>
+                    {
+                        form == "sign-up" ? <SignUpForm/> : <LoginForm/>
+                    }
                 </div>
-            </div>
-            <div className='w-full'>
-                {
-                    form == "sign-up" ? <SignUpForm/> : <LoginForm/>
-                }
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
+    </HideLogin>
   )
 }
 

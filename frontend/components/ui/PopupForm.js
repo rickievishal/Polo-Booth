@@ -17,6 +17,7 @@ const PopupForm = ({children,size="md",variant="primary",title="Title",onSubmit,
 
   return (
     <div className={clsx(
+        "w-full ",
         base,
         sizes[size],
         variants[variant].field,

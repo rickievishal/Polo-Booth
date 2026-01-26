@@ -3,18 +3,20 @@ import React from 'react'
 import Button from '../ui/Button'
 import { useAuth } from '@/context/AuthContext'
 import api from '@/libs/api';
-
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 const Navbar = () => {
     const data = useAuth();
-    console.log(data)
+    // console.log(data)
     const {user,isLoading} =data;
+    const router = useRouter()
     if (isLoading) return null;
-
     const handleLogout = async() => {
         try{
             const res = await api.get("/api/logout")
             console.log(res.data.message);
-
+            data.setUser(null);
+            router.refresh()
         }catch(e){
             console.log(e)
         }
@@ -31,28 +33,28 @@ const Navbar = () => {
                 Poloroid
             </span>
             <ul className='flex items-center gap-x-4'>
-                <li >
-                    <a className='font-bold hover:cursor-pointer' href='/profile'>
-                        Profile
-                    </a>
+                <li className='font-bold'>
+                    <Link className='font-bold hover:cursor-pointer' href='/home'>
+                        feed
+                    </Link>
                 </li>
                 <li className='font-bold'>
-                    <a className='font-bold hover:cursor-pointer' href='/home'>
-                        Posts
-                    </a>
+                    <Link className='font-bold hover:cursor-pointer' href='/post'>
+                        upload
+                    </Link>
                 </li>
                 <li > {
                     !user ?
-                    (<a className='font-bold hover:cursor-pointer' href='/login'>
+                    (<Link className='font-bold hover:cursor-pointer' href='/login'>
                         <Button>
                             Login
                         </Button>
-                    </a>) : 
-                    (<a className='font-bold hover:cursor-pointer' onClick={handleLogout}>
-                        <Button>
+                    </Link>) : 
+                    (
+                        <Button onClick={handleLogout}>
                             Logout
                         </Button>
-                    </a>)
+                    )
 }
                 </li>
             </ul>

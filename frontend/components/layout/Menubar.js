@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { FaPlus } from "react-icons/fa6";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -17,12 +18,12 @@ const Menubar = ({className}) => {
             {
                 isMenuOpen && (
                     <motion.div initial={{x:30, y : 80, opacity : 0.3 ,scale : 0.2}} animate={{x:0, y : 0, opacity : 1 ,scale : 1}} exit={{x:20, y : 80, opacity : 0.3 ,scale : 0.2}}  className='inline-flex items-center absolute right-0 bottom-[70px] gap-x-4'>
-                        <a href='/post' className='menu option h-[50px] px-4 space-x-2 rounded-full shadow-[6px_6px_0px_0px_black] flex justify-center items-center border-2 bg-(--primary)  '>
+                        <Link href='/post' className='menu option h-[50px] px-4 space-x-2 rounded-full shadow-[6px_6px_0px_0px_black] flex justify-center items-center border-2 bg-(--primary)  '>
                             <FaPlus className='text-xl'/>
                             <p>
                                 Post
                             </p>
-                        </a>
+                        </Link>
                     </motion.div>
                 )
             }

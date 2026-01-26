@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from "clsx"
+import Link from "next/link"
 const Button = ({children,onClick, type="button", variant="primary", size="md",className="",href="",disabled=false,...props}) => {
     const base = "font-bold border-2"
     const variants = {
@@ -13,7 +14,7 @@ const Button = ({children,onClick, type="button", variant="primary", size="md",c
         lg: "px-8 py-4 text-base rounded-r-full rounded-l-full",
     }
   return (
-    type == "nav-icon" ? (<a href={href} onClick={onClick} className={clsx(
+    type == "nav-icon" ? (<Link href={href} onClick={onClick} className={clsx(
         "shadow-[6px_6px_0px_0px_black]",
         "cursor-pointer",
         "active:shadow-[0px_0px_0px_0px_black]",
@@ -26,7 +27,7 @@ const Button = ({children,onClick, type="button", variant="primary", size="md",c
         base
     )} {...props}>
         {children}
-    </a>) : (<button type={type} onClick={onClick} className={clsx(
+    </Link>) : (<button type={type} onClick={onClick} className={clsx(
         "shadow-[6px_6px_0px_0px_black]",
         "cursor-pointer",
         "active:shadow-[0px_0px_0px_0px_black]",

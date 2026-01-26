@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${comic.variable}`}>
       <body
-        className={`${comic.variable} comic antialiased w-screen overflow-x-hidden`}
+        className={`${comic.variable} comic antialiased w-screen overflow-x-hidden bg-pink-50`}
       >
         <AuthProvider>
           <Navbar/>

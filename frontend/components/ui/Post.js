@@ -15,7 +15,7 @@ const Post = ({data,type="post"}) => {
             <h2 className='text-lg font-bold text-wrap'>
                 {title}
             </h2>
-            <p className='text-sm'>
+            <p className='text-sm text-wrap'>
                 {caption}
             </p>
         </div>
