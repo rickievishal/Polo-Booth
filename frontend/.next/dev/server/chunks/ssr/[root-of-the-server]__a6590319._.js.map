@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/vishalthangamaiappan/blog-site-learn/frontend/app/login/page.js"],"sourcesContent":["import React from 'react'\n\nconst page = () => {\n  return (\n    <div>\n        <h1>\n            login\n        </h1>\n        <input className='border' />\n    </div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;AAAA;;;AAEA,MAAM,OAAO;IACX,qBACE,mRAAC;;0BACG,mRAAC;0BAAG;;;;;;0BAGJ,mRAAC;gBAAM,WAAU;;;;;;;;;;;;AAGzB;uCAEe"}}]
-}

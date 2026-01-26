@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/vishalthangamaiappan/blog-site-learn/frontend/app/components-lib/page.js"],"sourcesContent":["import React from 'react'\n\nconst page = () => {\n  return (\n    <div className='w-full h-full'>\n        <div className='max-w-5xl mx-auto'>\n          <h1 className='text-lg'>\n            Components\n          </h1>\n\n        </div>\n    </div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;AAAA;;;AAEA,MAAM,OAAO;IACX,qBACE,mRAAC;QAAI,WAAU;kBACX,cAAA,mRAAC;YAAI,WAAU;sBACb,cAAA,mRAAC;gBAAG,WAAU;0BAAU;;;;;;;;;;;;;;;;AAOlC;uCAEe"}}]
-}
