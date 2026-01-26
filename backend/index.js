@@ -13,9 +13,9 @@ const { deletePost } = require("./controllers/deletePost");
 const cookieParser = require("cookie-parser");
 const { logout } = require("./controllers/logoutUser");
 const app = express();
-
+const ORIGIN = process.env.ORIGIN;
 app.use(cors({
-    origin:'http://192.168.3.1:3000',
+    origin:ORIGIN,
     credentials :true
 }))
 
