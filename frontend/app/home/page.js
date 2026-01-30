@@ -14,7 +14,7 @@ import { useAuth } from '@/context/AuthContext';
 
 const page = () => {
     const [posts, setPosts] = useState(null)
-    const {user,setUser} = useAuth();
+    const {user,setUser,isLoading} = useAuth();
 
     const fetchPost = async() => {
         try{
@@ -61,7 +61,7 @@ const page = () => {
                     </div>
                 </div>
                 {
-                    !user && (<PopUpBox title='Warning' actionName='Login' message={"You are currently Signed out :)"} icon={<FiArrowRight />}/>)
+                    !user && isLoading && (<PopUpBox title='Warning' actionName='Login' message={"You are currently Signed out :)"} icon={<FiArrowRight />}/>)
                 }                   
                 {posts?.map((data) => (<Post data={data} key={data._id}/>))}
             </div>

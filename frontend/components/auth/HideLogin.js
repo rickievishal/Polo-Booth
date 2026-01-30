@@ -5,6 +5,7 @@
 import { useAuth } from "@/context/AuthContext";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import LoadingPage from "../ui/LoadingPage";
 
 const HideLogin = ({ children }) => {
   const router = useRouter();
@@ -17,10 +18,10 @@ const HideLogin = ({ children }) => {
   }, [user, isLoading, router]);
 
 
-  if (isLoading) return null;
+  if (isLoading) return <LoadingPage/>;
 
 
-  if (user) return null;
+  if (user) return <LoadingPage/>;
 
   return children;
 };
