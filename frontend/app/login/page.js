@@ -7,6 +7,7 @@ import Button from '@/components/ui/Button'
 import PopupForm from '@/components/ui/PopupForm'
 import { useRouter } from 'next/navigation'
 import HideLogin from '@/components/auth/HideLogin'
+import { useAuth } from '@/context/AuthContext'
 
 
 const LoginForm = () =>{
@@ -14,14 +15,16 @@ const LoginForm = () =>{
     const [password, setPassword] = useState("");
     const [isLoading, setIsLoading] = useState(false)
     const router = useRouter();
+    const {user,setUser} = useAuth();
     const handleLogin = async(e)=> {
         e.preventDefault();
         setIsLoading(true);
         try{
-            await api.post("/api/login",{
+            const user = await api.post("/api/login",{
                 email,
                 password
             })
+            setUser(user);
             console.log("signed in")
             setIsLoading(false);
             router.replace("/home")
@@ -33,9 +36,8 @@ const LoginForm = () =>{
     return (
         <PopupForm title='Login' className='flex flex-col gap-y-4 pb-8 px-4' onSubmit={handleLogin}>
             <div className='max-w-sm'>
-            
             <Input
-            label={"Email"}
+                label={"Email"}
                 placeholder='email'
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}

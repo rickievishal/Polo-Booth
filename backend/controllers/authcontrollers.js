@@ -64,7 +64,7 @@ const login = async(req,res) => {
                 sameSite : "none",
                 maxAge: 60*60*1000*100000
             })
-            res.json({token});
+            res.json({email : user.email,username : user.username});
             return;
         }
         else{

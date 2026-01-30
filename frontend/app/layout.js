@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono, Playpen_Sans } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/context/AuthContext";
+import  {AuthProvider}  from "@/context/AuthContext";
 import Navbar from "@/components/layout/Navbar";
 
 const comic = Playpen_Sans(

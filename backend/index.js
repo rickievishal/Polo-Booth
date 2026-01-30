@@ -28,7 +28,7 @@ app.get('/',(req,res)=> {
 app.use(cookieParser());
 app.use(express.json({limit : "5mb"}));
 app.get("/api/validate",validateToken)
-app.get("/api/get-posts",protect,getPosts)
+app.get("/api/get-posts",getPosts)
 
 app.post("/api/login",login);
 app.post("/api/create-account",createAccount)

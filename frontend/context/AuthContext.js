@@ -12,7 +12,6 @@ export const AuthProvider = ({children}) => {
     const router = useRouter();
 
     useEffect(()=>{
-        try{
             const fetchUser = async() =>{
                 try{
                     const res = await api.get("/api/validate");
@@ -21,15 +20,13 @@ export const AuthProvider = ({children}) => {
 
                 }catch(e){
                     console.log("Sign In, you are currently signed out")
-                    router.replace('/home');
+                    
+                }finally{
+                    setIsLoading(false)
                 }
             }
-            fetchUser()
-        }catch(e){
-            console.log(e);
-        }finally{
-            setIsLoading(false)
-        }
+            fetchUser();
+        
     },[])
     return(
         <AuthContext.Provider value={{user, isLoading, setUser}}>

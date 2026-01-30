@@ -6,6 +6,7 @@ import Input from '@/components/ui/Input';
 import PopupForm from '@/components/ui/PopupForm';
 import Post from '@/components/ui/Post';
 import { useAuth } from '@/context/AuthContext';
+
 import api from '@/libs/api';
 import imageCompression from 'browser-image-compression';
 import React, { useState } from 'react'
@@ -15,8 +16,8 @@ const page = () => {
     const [caption, setCaption] = useState("make it short and sweet :)");
     const [imgUrl, setImgUrl] = useState("/assets/UploadPlaceholder.png");
     const [fileName, setFileName] = useState("No image")
-    const data = useAuth();
-    const user = data?.user;
+    const {user,setUser} = useAuth();
+
     console.log(user?.username)
     const handleFileChange = async(e) => {
         const file = e.target.files[0];

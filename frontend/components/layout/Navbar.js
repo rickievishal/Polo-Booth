@@ -1,22 +1,24 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from '../ui/Button'
 import { useAuth } from '@/context/AuthContext'
 import api from '@/libs/api';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { Island_Moments } from 'next/font/google';
 const Navbar = () => {
-    const data = useAuth();
-    // console.log(data)
-    const {user,isLoading} =data;
+
+    const {user,isLoading,setUser} = useAuth();
+
+    
     const router = useRouter()
     if (isLoading) return null;
     const handleLogout = async() => {
         try{
             const res = await api.get("/api/logout")
             console.log(res.data.message);
-            data.setUser(null);
-            router.refresh()
+            setUser(null);
+            router.refresh();
         }catch(e){
             console.log(e)
         }
@@ -39,9 +41,14 @@ const Navbar = () => {
                     </Link>
                 </li>
                 <li className='font-bold'>
-                    <Link className='font-bold hover:cursor-pointer text-sm' href='/post'>
-                        upload
-                    </Link>
+                    {
+                        user && (
+                            <Link className='font-bold hover:cursor-pointer text-sm' href='/post'>
+                                upload
+                            </Link>
+                        )
+                    }
+                    
                 </li>
                 <li > {
                     !user ?
