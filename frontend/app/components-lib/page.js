@@ -1,6 +1,7 @@
+"use client"
 import Button from '@/components/ui/Button'
 import Input from '@/components/ui/Input'
-import React from 'react'
+import React, { useState } from 'react'
 
 const page = () => {
   const colorScheme = [{
@@ -15,11 +16,20 @@ const page = () => {
     label : "primary-bg"
   }
 ]
+const [primary, setPrimary] = useState("Primary")
+const [secondary, setSecondary] = useState("Secondary")
+const [disabled, setDisabled] = useState("Disabled")
+
   return (
-     <div className="mx-auto max-w-4xl p-8 space-y-12">
-     <h1 className='text-3xl font-bold'>
+     <div className="mx-auto max-w-4xl p-8 space-y-12 mt-24">
+     <section>
+      <h1 className='text-3xl font-bold'>
       Components
      </h1>
+      <p className='mt-4'>
+          This is a collective component library where you can see all the components used accross the ui.
+      </p>
+     </section>
      <section className='space-y-4'>
       <h2 className='text-xl font-bold'>
         Color Scheme
@@ -44,9 +54,9 @@ const page = () => {
         Inputs
       </h2>
       <div className='max-w-sm space-y-4'>
-        <Input label={"primary"} value='primary' variant='primary'/>
-        <Input label={"secondary"} value='secondary' variant='secondary'/>
-        <Input label={"disabled"} value='disabled' disabled={true}/>
+        <Input  label={"primary"} value={primary} variant='primary' onChange={(e) => setPrimary(e.target.value)}/>
+        <Input label={"secondary"} value={secondary} variant='secondary' onChange={(e) => setSecondary(e.target.value)}/>
+        <Input label={"disabled"} value={disabled} disabled={true} onChange={(e) => setDisabled(e.target.value)}/>
       </div>
      </section>
      <section className='space-y-4'>
