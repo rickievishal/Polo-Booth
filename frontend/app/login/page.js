@@ -19,6 +19,8 @@ const LoginForm = () =>{
     const handleLogin = async(e)=> {
         e.preventDefault();
         setIsLoading(true);
+        const apiEndPoint = process.env.NEXT_PUBLIC_API_URL;
+
         try{
             const user = await api.post("/api/login",{
                 email,
