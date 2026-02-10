@@ -131,16 +131,33 @@ export default function Home() {
           Feels like memories.
         </h2>
 
-        <div className="relative  h-[500px]">
-          <motion.div {...wigglyAnimation1} className="rotate-[-6deg]">
-            <Polaroid data={dummy} />
-          </motion.div>
-          <motion.div {...wigglyAnimation2}  className="rotate-[3deg]">
-            <Polaroid data={dummy} />
-          </motion.div>
-          <motion.div {...wigglyAnimation3}  className="absolute left-[420px] rotate-[-2deg] hidden md:block">
-            <Polaroid data={dummy} />
-          </motion.div>
+        <div className="  h-[500px]">
+          <div className="w-full h-[500px] relative">
+            {/* <motion.div {...wigglyAnimation1} className="absolute top-0 left-0 rotate-[-6deg]">
+              <Polaroid data={dummy} />
+            </motion.div>
+            <motion.div {...wigglyAnimation2}  className="absoulte top-0 left-0 rotate-[3deg]">
+              <Polaroid data={dummy} />
+            </motion.div>
+            <motion.div {...wigglyAnimation2}  className="absoulte top-0 left-0 rotate-[3deg]">
+              <Polaroid data={dummy} />
+            </motion.div> */}
+            <div className="absolute top-0 right-1/2 translate-x-1/2">
+              <motion.div {...wigglyAnimation1} className="absolute top-0 left-0 rotate-[6deg]">
+                <Polaroid data={dummy} />
+              </motion.div>
+            </div>
+            <div className="absolute top-0 right-1/2 translate-x-1/4 ">
+              <motion.div {...wigglyAnimation2}  className="absoulte top-0 left-0 rotate-[0deg]">
+                <Polaroid data={dummy} />
+              </motion.div>
+            </div>
+            <div className="absolute top-0 right-1/2 -translate-x-1/2">
+              <motion.div {...wigglyAnimation2}  className="absoulte top-0 left-0 rotate-[-6deg]">
+                <Polaroid data={dummy} />
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
