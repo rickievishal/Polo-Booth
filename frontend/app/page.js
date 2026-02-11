@@ -66,8 +66,8 @@ export default function Home() {
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl font-black leading-tight">
               Your camera roll, <br />
-              <span className="inline-block bg-[var(--primary)] px-3 py-1 border-4 border-black shadow-[6px_6px_0px_0px_black]">
-                but social
+              <span className="inline-block bg-[var(--primary)] px-4 py-1 border-4 border-black border-r-full rounded-r-xl rounded-l-xl shadow-[6px_6px_0px_0px_black]">
+                but aesthetic
               </span>
             </h1>
 
@@ -89,13 +89,13 @@ export default function Home() {
           {/* Polaroid Stack */}
           <div className="relative h-[420px] hidden md:block">
             <div className="absolute left-0 top-12 rotate-[-8deg]">
-              <Polaroid data={{author : "new",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "click",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
             </div>
             <div className="absolute left-36 top-0 rotate-[4deg]">
-              <Polaroid data={{author : "new",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "snap",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
             </div>
             <div className="absolute left-64 top-20 rotate-[-2deg]">
-              <Polaroid data={{author : "new",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "your post",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
             </div>
           </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
         </h2>
 
         <div className="  h-[500px]">
-          <div className="w-full h-[500px] relative">
+          <div className="w-full h-[500px] relative translate-x-[20px]">
             {/* <motion.div {...wigglyAnimation1} className="absolute top-0 left-0 rotate-[-6deg]">
               <Polaroid data={dummy} />
             </motion.div>
@@ -165,8 +165,11 @@ export default function Home() {
       <section className="max-w-5xl mx-auto px-6 py-24 text-center">
         <div className="border-4 border-black rounded-2xl p-12 bg-[var(--primary)] shadow-[6px_6px_0px_0px_black]">
           <h3 className="text-3xl font-black mb-6">
-            Start where memories matter.
+            Start where memories become delulu...
           </h3>
+          <p className="mb-4">
+            I made this fun thing to 
+          </p>
           <Button size="lg">
             Join Polo-Booth
           </Button>
