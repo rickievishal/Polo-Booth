@@ -12,7 +12,7 @@ export default function Home() {
   const dummy = {
         _id : "asfadf",
         title : "Sankari Today",
-        imgUrl : "https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg",
+        imgUrl : "https://polo-booth.vercel.app/assets/heroplaceholder.jpg",
         caption : "I look too cute today ;)",
         author : "Sankari",
         views : 45,
@@ -89,13 +89,13 @@ export default function Home() {
           {/* Polaroid Stack */}
           <div className="relative h-[420px] hidden md:block">
             <div className="absolute left-0 top-12 rotate-[-8deg]">
-              <Polaroid data={{author : "click",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "click",imgUrl:"https://polo-booth.vercel.app/assets/heroplaceholder.jpg"}}/>
             </div>
             <div className="absolute left-36 top-0 rotate-[4deg]">
-              <Polaroid data={{author : "snap",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "snap",imgUrl:"https://polo-booth.vercel.app/assets/heroplaceholder.jpg"}}/>
             </div>
             <div className="absolute left-64 top-20 rotate-[-2deg]">
-              <Polaroid data={{author : "your post",imgUrl:"https://i.pinimg.com/736x/d5/a1/ee/d5a1eed890a8c1cfa4746368a5b1a06b.jpg"}}/>
+              <Polaroid data={{author : "your post",imgUrl:"https://polo-booth.vercel.app/assets/heroplaceholder.jpg"}}/>
             </div>
           </div>
 
