@@ -12,7 +12,7 @@ const Navbar = () => {
 
     
     const router = useRouter()
-    if (isLoading) return null;
+    // if (isLoading) return null;
     const handleLogout = async() => {
         try{
             const res = await api.get("/api/logout")
