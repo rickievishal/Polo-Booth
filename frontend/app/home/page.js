@@ -16,12 +16,13 @@ import LoadingPage from '@/components/ui/LoadingPage';
 const page = () => {
     const [posts, setPosts] = useState(null)
     const {user,setUser,isLoading} = useAuth();
-
+    const [isPostLoading, setIsPostLoading] = useState(true);
     const fetchPost = async() => {
         try{
             const res = await api.get("/api/get-posts");
             console.log(res.data);
             setPosts(res.data);
+            setIsPostLoading(false)
         }catch(e){
             console.log(e)
         }
@@ -65,7 +66,7 @@ const page = () => {
                     !user && isLoading && (<PopUpBox title='Warning' actionName='Login' message={"You are currently Signed out :)"} icon={<FiArrowRight />}/>)
                 }       
                 {
-                    isLoading && <LoadingPage/>
+                    isPostLoading && <LoadingPage/>
                 }            
                 {posts?.map((data) => (<Post data={data} key={data._id}/>))}
             </div>
