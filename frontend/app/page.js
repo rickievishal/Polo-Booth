@@ -153,7 +153,7 @@ export default function Home() {
               </motion.div>
             </div>
             <div className="absolute top-0 right-1/2 -translate-x-1/2">
-              <motion.div {...wigglyAnimation2}  className="absoulte top-0 left-0 rotate-[-6deg]">
+              <motion.div {...wigglyAnimation3}  className="absoulte top-0 left-0 rotate-[-6deg]">
                 <Polaroid data={dummy} />
               </motion.div>
             </div>
