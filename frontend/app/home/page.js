@@ -10,6 +10,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import { FaPlus } from "react-icons/fa6";
 import { useAuth } from '@/context/AuthContext';
+import LoadingPage from '@/components/ui/LoadingPage';
 
 
 const page = () => {
@@ -62,7 +63,10 @@ const page = () => {
                 </div>
                 {
                     !user && isLoading && (<PopUpBox title='Warning' actionName='Login' message={"You are currently Signed out :)"} icon={<FiArrowRight />}/>)
-                }                   
+                }       
+                {
+                    isLoading && <LoadingPage/>
+                }            
                 {posts?.map((data) => (<Post data={data} key={data._id}/>))}
             </div>
         </section>
