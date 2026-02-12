@@ -36,6 +36,11 @@ const Navbar = () => {
             </span>
             <ul className='flex items-center gap-x-4'>
                 <li className='font-bold'>
+                    <Link className='font-bold hover:cursor-pointer text-sm' href='/'>
+                        home
+                    </Link>
+                </li>
+                <li className='font-bold'>
                     <Link className='font-bold hover:cursor-pointer text-sm' href='/home'>
                         feed
                     </Link>
